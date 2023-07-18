@@ -1,0 +1,91 @@
+<div class="card">
+  <div class="card-header text-center bg-info text-white">
+    <h3>EMPLOYEE EDIT PAGE</h3>
+  </div>
+  <div class="card-body">
+    <form action="#" (ngSubmit)="updateEmployee()">
+      <div class="form-group">
+        <label>Employee Id</label>
+        <input
+          type="text"
+          name="empId"
+          id="empId"
+          [(ngModel)]="employee.empId"
+          class="form-control"
+          readonly
+        />
+      </div>
+      <div class="form-group">
+        <label>Employee Name</label>
+        <input
+          type="text"
+          name="empName"
+          id="empName"
+          [(ngModel)]="employee.empName"
+          class="form-control"
+        />
+      </div>
+
+      <div class="form-group">
+        <label>Employee Salary</label>
+        <input
+          type="number"
+          name="empSal"
+          id="empSal"
+          [(ngModel)]="employee.empSal"
+          class="form-control"
+        />
+      </div>
+
+      <div class="form-group">
+        <label>Employee Gender</label>
+        <br />
+        <input
+          type="radio"
+          name="empGen"
+          id="empGen1"
+          [(ngModel)]="employee.empGen"
+          value="Male"
+        />
+        Male
+        <input
+          type="radio"
+          name="empGen"
+          id="empGen2"
+          [(ngModel)]="employee.empGen"
+          value="Female"
+        />
+        Female
+      </div>
+
+      <div class="form-group">
+        <label>Employee Department</label>
+        <select
+          name="empDept"
+          id="empDept"
+          [(ngModel)]="employee.empDept"
+          class="form-control"
+        >
+          <option value="">SELECT</option>
+          <option value="Dev">Dev</option>
+          <option value="QA">QA</option>
+          <option value="BA">BA</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Employee Address</label>
+        <textarea
+          name="empAddr"
+          id="empAddr"
+          [(ngModel)]="employee.empAddr"
+          class="form-control"
+        >
+        </textarea>
+      </div>
+
+      <button type="submit" class="btn btn-success">UPDATE</button>
+    </form>
+  </div>
+  
+</div>

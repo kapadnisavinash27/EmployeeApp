@@ -1,0 +1,25 @@
+<h3>ALL EMPLOYEES DATA</h3>
+<table class="table table-hover">
+    <tr class="bg-info text-white">
+        <th>ID</th>
+        <th>NAME</th>
+        <th>SAL</th>
+        <th>GEN</th>
+        <th>DEPT</th>
+        <th>ADDR</th>
+        <th>OPERATIONS</th>
+    </tr>
+    <tr *ngFor="let emp of employees">
+        <td>{{emp.empId}}</td>
+        <td>{{emp.empName}}</td>
+        <td>{{emp.empSal}}</td>
+        <td>{{emp.empGen}}</td>
+        <td>{{emp.empDept}}</td>
+        <td>{{emp.empAddr}}</td>
+        <td>
+            <button class="btn btn-danger" (click)="deleteEmployee(emp.empId)">DELETE</button>
+            &nbsp; <button class="btn btn-warning" (click)="editEmployee(emp.empId)">EDIT</button>
+        </td>
+    </tr>
+</table>
+<div class="bg-success text-white text-center">{{message}}</div>
